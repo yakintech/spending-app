@@ -22,3 +22,35 @@ func dateToString(date:Date) -> String{
     return result;
     
 }
+
+
+func getDayNumber(date:Date) -> Int{
+
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.day], from: date)
+    let day = components.day
+    
+    return day ?? 01
+}
+
+
+func getMonthNumber(date:Date) -> Int{
+
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.month], from: date)
+    let month = components.month
+    
+    return month ?? 01
+}
+
+
+func getYearNumber(date:Date) -> Int{
+
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.year], from: date)
+    let year = components.year
+    
+    return year ?? 01
+}
+
+
